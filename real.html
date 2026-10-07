@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>the girl</title>
+</head>
+<body>
+<p>therealdeal</p>
+
+
+<button onclick="getUserInput()"> Multiply Numbers  </button>
+<button onclick="getResult()">Result</button>
+<script>
+
+function getResult(number1, number2){
+    return number1 * number2;
+}
+
+function getUserInput(){
+    let firstInput = prompt("Enter first number:");
+    let firstNumber = Number(firstInput);
+
+    let secondInput = prompt("Enter second number:");
+    let secondNumber = Number(secondInput);
+
+    if (isNaN(firstNumber) || isNaN(secondNumber) || firstInput === "" || secondInput === "") {
+        alert("Please enter valid numbers!");
+    }
+    else {
+        let result = getResult(firstNumber, secondNumber);
+
+        alert("The answer is:" + result);
+    }
+}
+
+</script>
+</body>
+</html>
